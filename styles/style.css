@@ -219,6 +219,7 @@
     position: static;    
     width: 640px; 
     height: 50px;
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
@@ -322,19 +323,17 @@ h1 {
     justify-content: center;
     align-items: center;
     text-align: center;
-
-    margin-top: 50px;
-    margin-bottom: 100px;
   
 }
 
 
 
-.our_story{
+.slack_container{
 /* done */
     max-width: 1440px;
     height: 630.52px;
     margin: 0 auto;
+    display: flex;
     flex-direction: row;
     gap: 20px;
     
@@ -345,88 +344,83 @@ h1 {
 
 
 .Story{
-
-    max-width: 100%; 
-    max-height: 622px; 
-    margin: 0 auto; 
-    padding: 10px; 
-    flex-wrap: wrap; 
-    justify-content: space-between; 
-    align-items: flex-start; 
-    overflow: hidden; 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 700px;
+    height: 650px; */       
 }
+/* .Story img{
+    filter: grayscale(100%);
 
+} */
 
 .slack-card > * {
     padding-left: 50px;
-  }
+  } 
 
-  .Card_img2 {
-    background-image: linear-gradient(to top, #ffffff60, #d4d0d000 40%), url(../assets/story-2.png);  
-  }
 
-  .Card_img3 {
+.Card_img2{
+
+ background-image: linear-gradient(to top, #ffffff60, #d4d0d000 40%), url(../assets/story-2.png);  
+}
+
+.Card_img3{
     background-image: linear-gradient(to top, #ffffff60, #d4d0d000 40%), url(../assets/story-3.png);  
-  }
+     
+}
 
-  .Card_img4 {
-    background-image: linear-gradient(to top, #ffffff60, #d4d0d000 40%), url(../assets/story-4.png); 
-  }
+.Card_img4{
+   
+    background-image: linear-gradient(to top, #ffffff60, #d4d0d000 40%), url(../assets/story-4.png) ; 
+}
 
-  .Card_img5 {
-    background-image: linear-gradient(to top, #ffffff60, #d4d0d000 40%), url(../assets/story-5.png); 
-  }
+.Card_img5{
 
-  #date2 {
+    background-image: linear-gradient(to top, #ffffff60, #d4d0d000 40%), url(../assets/story-5.png) ; 
+    
+
+}
+
+#date2 {
+    /* position: absolute;  */
+    /* top: 130px; */
+    /* left: 50%; */
+
+    /* top: 50%; 
+    left: 35%;  */
+
     position: absolute;
     width: 174.51px;
     height: 38.35px;
     left: 38.35px;
     top: 157.81px;
+
     transform: translateX(-10%);
+    /* transform: translate(-50%, -50%);  */
+    /* z-index: 2;  */
+    
     padding: 10px 20px;
+    /* padding: 8px 15px; */
     font-family: Raleway;
     font-size: 15.34px;
+    /* font-size: 1.5rem; */
+
     font-weight: 500;
     color: rgb(2, 2, 2);
     border: none; 
     border-radius: 6px; 
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-  }
-
-  .profile-actions {
-    margin: 30px 0 30px 0;
+}
+  
+.profile-actions {
+    margin: 30px 0 30px 0px;
     padding: 0;
     list-style-type: none;
-  }
 
-  .slack-card:hover {
-    background-color: #c3f1bc;
-  }
-
-  .header-with-img {
-    color: black;
-    position: relative;
-    width: auto;
-    height: 177px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    border-radius: 16px 16px 0 0;   
-  }
-
-  .slack-card {
-    margin: 15px;
-    border-radius: 6px;
-    overflow: hidden;
-    width: 300px;
-    height: 300px; 
-    background: white;
-    box-sizing: border-box;
-    box-shadow: 2.5px 2.5px 15px -5px rgb(230, 228, 228);  
-    position: relative; 
-    color: black;
-  }
+}
    
 .slack-card:hover {
     background-color: #c3f1bc;
@@ -436,22 +430,19 @@ h1 {
 
 
 .slack-card_Big {
-    margin: 15px;
     border-radius: 6px;
-    overflow: hidden;
-    width: 1400.27px;
-    height: 630.52px;
+    width: 550px;
+    height: 550px;
     background: white;
     box-shadow: 2.5px 2.5px 15px -5px rgb(230, 228, 228);
-    font-family: "Open Sans", sans-serif;
     box-sizing: border-box;
-    position: relative; 
+    position: sticky; 
     color: black;
 }
 
 .header-with-img_Big {
     position: relative;
-    width: 704px;
+    width: 550px;
     height: 337px;
     left: 0;
     top: 0;
@@ -461,6 +452,20 @@ h1 {
     background-position: center center;
     border-radius: 16px 16px 0px 0px;
 }
+
+
+
+.slack-card_Big:hover {
+    background-color: #c3f1bc;
+}
+
+.profile{
+    justify-items: flex-end;
+   
+    flex-direction: column;
+}
+
+
 
 #date {
     position: absolute;
@@ -495,29 +500,14 @@ h1 {
     background-color: #0056b3; 
 } */
 
-.profile-actions {
-    /* margin-top: 20px;
-    padding: 0 15px; */
-}
 
-.slack-card_Big:hover {
-    background-color: #c3f1bc;
-}
-
-.profile{
-  
-margin-top: 100px;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
 
 #Show_BG2 {
     max-width: 100%;
-    height: 1006px;
+    /* height: 1006px; */
     background-size: cover;
     background: url(../assets/bg.png),linear-gradient(0.00deg, rgba(254, 163, 1, 0.3),rgba(255, 255, 255, 0.3) 100%);
-    background-size: cover;
+    /* background-size: cover; */
     padding: 20px;
 }
 
@@ -525,57 +515,58 @@ margin-top: 100px;
 /* footer section */
 
 .footer_section {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: rgb(1, 172, 253);
-    color: white;
-  }
+    position: absolute;
+   
+    justify-content: center; 
+    align-items: center; 
+    width: 1900px;
+    height: 519px;
+    left: 1px;
+    top: 2572px;
+    background: rgb(1, 172, 253); 
+    padding: 20px; 
+    box-sizing: border-box; 
+}
 
-  .footer_section .footer_nav,
-  .footer_section .About,
-  .footer_section .Touch {
-    flex: 1;
-    margin-right: 20px;
-  }
+.div_footer {
+   
+    justify-content: space-between; 
+    align-items: center; 
+    width: 80%; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
 
-  .footer_section img {
-    max-width: 100%;
-  }
-
-  .footer_section p,
-  .footer_section li,
-  .footer_section h3,
-  .footer_section h2 {
-    margin: 10px 0;
-  }
-
-  .footer_section .footer_item {
-    list-style: none;
-  }
-
-  .footer_section .footer_item a {
-    text-decoration: none;
-    color: white;
-  }
-
-  .footer_section .Touch img {
-    margin-right: 10px;
-  }
-
-  .footer_section .Group_2 {
-    display: flex;
+/* .footer_nav, .About, .Touch {
+    justify-content: center;
     align-items: center;
-  }
+    list-style: none;
+    flex: 1; 
+    text-align: center; 
+    padding: 10px; 
+    text-decoration: none;
+    color: #fff;
+    gap: 10px; 
+} */
 
+.About{
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+}
 /* scrolling Text */
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
     .Group_3 {
       display: none;
     }
 
     #menuToggle:checked ~ .Group_3 {
+      display: flex;
       flex-direction: column;
       align-items: center;
       position: absolute;
@@ -598,54 +589,46 @@ margin-top: 100px;
     .empower{
         flex-direction: column-reverse;
         justify-content: center;
-        padding: 50px;
-    }
-    .banner_image{
-        margin-top: 50px;
+        align-items: center;
     }
     .text-content{
-        position: static;
-        width: 357px;
-        height: 252px;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
     }
     .w{
-        font-size: 33px;
+        margin-left: 100px;
     }
     .v{
-        font-size: small; 
+        margin-left: 90px;
     }
-
+    .Card_section,
     .Card{
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
     }
-
-    .slack-card_Big{
+    .header-with-img_Big, .slack-card_Big{
         display: none;
     }
-    .Story_section{
-       
-        flex-direction: column;
-    }
 
-    .footer_section {
-        flex-direction: column;
+    .Story{
+        display: grid;
+        grid-template-columns:  1fr;
         align-items: center;
-      }
 
-      .footer_section .footer_nav,
-      .footer_section .About,
-      .footer_section .Touch {
-        margin-right: 0;
-        margin-bottom: 20px;
-      }
 
-      .Story{
-        flex-wrap: wrap;
-        justify-items: center;
+    }
+    footer {
+        position: sticky;
+        bottom: 0;
       }
     
+
+      
   }
 
 
+  @media (max-width: 480px) {
+
+    
+    
+  }
