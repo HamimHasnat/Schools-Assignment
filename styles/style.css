@@ -514,10 +514,16 @@ h1 {
 
 
 /* footer section */
+footer{
+    display: flex;
+    justify-content: center;
+}
 .div-Container{
-    justify-content: space-between;
-    width: 300px;
-    height: 400px;
+height: 500px;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+ 
     margin: 0;
     padding: 0;
 }
@@ -526,8 +532,11 @@ h1 {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin: 0;
-    padding: 0;
+
+}
+.f_p{
+    color: #fff;
+    word-wrap: break-word;
 }
 
 a{
@@ -567,7 +576,7 @@ a{
     .hamburger {
       display: block;
     }
-    
+
 
     .empower{
         flex-direction: column-reverse;
